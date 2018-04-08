@@ -1,11 +1,15 @@
-<h1>id: <%= @task.id %>の詳細ページ </h1>
-  <p>コンテンツ<%= @task.content %>
-  </p>
-  <p>ステータス<%= @task.status %></p>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6">
+    <h1>id: <%= @task.id %>の詳細ページ </h1>
+      <p>コンテンツ<%= @task.content %>
+      </p>
+      <p>ステータス<%= @task.status %></p>
   
   <%= link_to '一覧に戻る', tasks_path %>
   <%= link_to 'このタスクを編集する', edit_task_path(@task) %>
   <%= link_to 'このタスクを削除する', @task, method: :delete, data: {confirm: '本当に削除してよろしいですか'} %>
-  
+    </div>
+</div>
   
   
